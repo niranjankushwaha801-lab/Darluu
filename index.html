@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +74,7 @@
   <p>
     <strong>Hello Darling g😽💖</strong><br><br>
     Please give me just 2–3 minutes…<br>
-    I sincerely want to say something that come straight from my heart 💌.
+    I sincerely want to say something that comes straight from my heart 💌.
   </p>
   <button class="yes" onclick="nextScene()">Start 💖</button>
 </div>
@@ -82,20 +85,12 @@ let step = 0;
 let yesCount = 0;
 
 const scenes = [
-  { 
-
-
-
-
-
-
-
-
-    letter:" You don't have any idea about my love towards you.
+  {
+    letter: "You don't have any idea about my love towards you 💗",
     question: "Do you love me too? 🌸"
   },
   {
-    letter: "You don't know ,your just presence used to make my whole day better 😌💗",
+    letter: "Your presence alone used to make my whole day better 😌💖",
     question: "Do you feel comfortable being yourself around me?"
   },
   {
@@ -103,12 +98,12 @@ const scenes = [
     question: "Do you believe mutual support makes bonds stronger?"
   },
   {
-    letter: "I know sometimes we fought a lot but I cared a lot for you 💞",
-    question: "Do you have any idea about that?"
+    letter: "I know sometimes we fought a lot, but I always cared deeply for you 💞",
+    question: "Did you ever feel that?"
   },
   {
     letter: "No matter what, you are genuinely special and respected 💝",
-    question: "Would you feel the same ?"
+    question: "Would you feel the same?"
   }
 ];
 
@@ -145,6 +140,64 @@ function showFinal() {
     startHearts();
     card.innerHTML = `
       <p>
+        <strong>Darling🫶</strong><br><br>
+        I’m truly sorry for the times I fought or misunderstood you.<br><br>
+        Sometimes we misunderstood each other, but I never believed those small issues
+        could break the respect, trust, and care I have for you ❤️.<br><br>
+        From the day you came into my life, everything felt lighter and happier.
+        Even your simple presence could calm my chaos 💫.<br><br>
+        You’re not just someone I like — you’re someone my heart chose quietly and sincerely 💓.<br><br>
+        — Someone who has always cared for you ♾️
+      </p>
+      <p><strong>Thank you for reading 🤍</strong></p>
+    `;
+  } else {
+    card.innerHTML = `
+      <p>Thank you for your honesty 🤍</p>
+      <p>I truly wish you happiness and peace 🌸</p>
+    `;
+  }
+}
+
+function startHearts() {
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+  }, 400);
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+<!  yesCount++;
+  step++;
+  nextScene();
+}
+
+function no() {
+  card.innerHTML = `
+    <p>Thank you for being honest 🤍</p>
+    <p>Your feelings are respected, always 🌸</p>
+    <button class="yes" onclick="step++; nextScene()">Continue 💭</button>
+  `;
+}
+
+function showFinal() {
+  if (yesCount === scenes.length) {
+    document.body.classList.add("pink");
+    startHearts();
+    card.innerHTML = `
+      <p>
         <strong> Darling🫶</strong><br><br>
         First of all, I’m truly sorry for fighting sometimes and being rude to youu ♾️.<br><br>
 
@@ -163,12 +216,7 @@ function showFinal() {
       <p><strong>Thank you for reading and Sorry for hurting,Darling.I really love you a lot ❤️ 💖</strong></p>
     `;
   } else {
-    card.innerHTML = `
-      <p>Thank you for your honesty 🤍</p>
-      <p>I truly wish you happiness and peace 🌸</p>
-    `;
-  }
-}
+    ca
 
 function startHearts() {
   setInterval(() => {
